@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css'
-import {debugData} from "../utils/debugData";
-import {fetchNui} from "../utils/fetchNui";
+import { debugData } from "./utils/debugData";
+import { fetchNui } from "./utils/fetchNui";
 
 // This will set the NUI to visible if we are
 // developing in browser
@@ -16,7 +16,7 @@ interface ReturnClientDataCompProps {
   data: any
 }
 
-const ReturnClientDataComp: React.FC<ReturnClientDataCompProps> = ({data}) => (
+const ReturnClientDataComp: React.FC<ReturnClientDataCompProps> = ({ data }) => (
   <>
     <h5>Returned Data:</h5>
     <pre>
@@ -43,7 +43,7 @@ const App: React.FC = () => {
       setClientData(retData)
     }).catch(e => {
       console.error('Setting mock data due to error', e)
-      setClientData({ x: 500, y: 300, z: 200})
+      setClientData({ x: 500, y: 300, z: 200 })
     })
   }
 
@@ -53,7 +53,9 @@ const App: React.FC = () => {
         <div>
           <h1>This is the NUI Popup!</h1>
           <p>Exit with the escape key</p>
-          <button onClick={handleGetClientData}>Get Client Data</button>
+          <button onClick={handleGetClientData} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Get Client Data
+          </button>
           {clientData && <ReturnClientDataComp data={clientData} />}
         </div>
       </div>
