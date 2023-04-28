@@ -1,11 +1,3 @@
-.nui-wrapper {
-  text-align: center;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 pre {
   counter-reset:line-numbering;
   background:#2c3e50;

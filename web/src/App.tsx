@@ -48,8 +48,8 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="nui-wrapper">
-      <div className='popup-thing'>
+    <div className="w-full h-full flex justify-center items-center">
+      <div className="popup-thing">
         <div>
           <h1>This is the NUI Popup!</h1>
           <p>Exit with the escape key</p>
